@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Cyber Assassin Guild</title>
+  <subtitle>Work in the Dark. To serve the light.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://seraphli.github.io/"/>
+  <updated>2017-04-19T03:31:39.939Z</updated>
+  <id>http://seraphli.github.io/</id>
+  
+  <author>
+    <name>SErAphLi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DiablOS Simulator Todo List</title>
+    <link href="http://seraphli.github.io/posts/1d834600/"/>
+    <id>http://seraphli.github.io/posts/1d834600/</id>
+    <published>2017-04-19T03:28:27.000Z</published>
+    <updated>2017-04-19T03:31:39.939Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;[ ] Change TKinter to pygame&lt;/li&gt;
+&lt;/ul&gt;
+
+    
+    </summary>
+    
+      <category term="DiablOS" scheme="http://seraphli.github.io/categories/DiablOS/"/>
+    
+    
+      <category term="Todo List" scheme="http://seraphli.github.io/tags/Todo-List/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use Cython to Build Code</title>
+    <link href="http://seraphli.github.io/posts/433d1379/"/>
+    <id>http://seraphli.github.io/posts/433d1379/</id>
+    <published>2017-03-29T01:35:35.000Z</published>
+    <updated>2017-04-06T08:59:32.660Z</updated>
+    
+    <summary type="html">
+    
+      Use cython to build code
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://seraphli.github.io/categories/Notes/"/>
+    
+    
+      <category term="Python" scheme="http://seraphli.github.io/tags/Python/"/>
+    
+      <category term="Cython" scheme="http://seraphli.github.io/tags/Cython/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RL Tutorial #1</title>
+    <link href="http://seraphli.github.io/posts/2cffd86/"/>
+    <id>http://seraphli.github.io/posts/2cffd86/</id>
+    <published>2017-03-28T13:06:00.000Z</published>
+    <updated>2017-04-06T08:59:32.660Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;What’s-Reinforcement-Learning&quot;&gt;&lt;a href=&quot;#What’s-Reinforcement-Learning&quot; class=&quot;headerlink&quot; title=&quot;What’s Reinforcement Learning&quot;&gt;&lt;/a&gt;What’s Reinforcement Learning&lt;/h2&gt;&lt;p&gt;One sentence to define reinforcement learning: the goal of RL is to find out a better policy to get more rewards from environment based on our current state, experience in the past, expectation and exploration in the future.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tutorial" scheme="http://seraphli.github.io/categories/Tutorial/"/>
+    
+    
+      <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Resource Collection About RL</title>
+    <link href="http://seraphli.github.io/posts/687582fb/"/>
+    <id>http://seraphli.github.io/posts/687582fb/</id>
+    <published>2017-03-27T15:01:11.000Z</published>
+    <updated>2017-04-19T01:50:43.693Z</updated>
+    
+    <summary type="html">
+    
+      Resource collection about reinforcement learning
+    
+    </summary>
+    
+      <category term="Collection" scheme="http://seraphli.github.io/categories/Collection/"/>
+    
+    
+      <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YADQN Note #2</title>
+    <link href="http://seraphli.github.io/posts/56c32fc8/"/>
+    <id>http://seraphli.github.io/posts/56c32fc8/</id>
+    <published>2017-03-27T14:20:24.000Z</published>
+    <updated>2017-04-19T01:50:43.693Z</updated>
+    
+    <summary type="html">
+    
+      Notes while building YADQN
+    
+    </summary>
+    
+      <category term="YADQN" scheme="http://seraphli.github.io/categories/YADQN/"/>
+    
+    
+      <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+      <category term="Note" scheme="http://seraphli.github.io/tags/Note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YADQN Todo List</title>
+    <link href="http://seraphli.github.io/posts/4656ea70/"/>
+    <id>http://seraphli.github.io/posts/4656ea70/</id>
+    <published>2017-03-27T14:04:21.000Z</published>
+    <updated>2017-04-19T03:31:30.963Z</updated>
+    
+    <summary type="html">
+    
+      Here I list things and plans need to do about YADQN.
+    
+    </summary>
+    
+      <category term="YADQN" scheme="http://seraphli.github.io/categories/YADQN/"/>
+    
+    
+      <category term="Todo List" scheme="http://seraphli.github.io/tags/Todo-List/"/>
+    
+      <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YADQN Note #1</title>
+    <link href="http://seraphli.github.io/posts/8c38ea69/"/>
+    <id>http://seraphli.github.io/posts/8c38ea69/</id>
+    <published>2017-03-25T12:17:00.000Z</published>
+    <updated>2017-04-06T08:59:32.660Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Things&quot;&gt;&lt;a href=&quot;#Things&quot; class=&quot;headerlink&quot; title=&quot;Things&quot;&gt;&lt;/a&gt;Things&lt;/h2&gt;&lt;p&gt;I will going to build the algorithm known as DQN. I decide to use &lt;a href=&quot;https://gym.openai.com/&quot;&gt;openai gym&lt;/a&gt; to reproduce the result described in &lt;a href=&quot;http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html&quot;&gt;Human-level control through deep reinforcement learning&lt;/a&gt;. The article can be download from &lt;a href=&quot;https://www.cs.swarthmore.edu/~meeden/cs63/s15/nature15b.pdf&quot;&gt;here&lt;/a&gt; for free.&lt;br&gt;I notice that there are so many repositories about DQN, but a lot of them don’t generate any benchmark for algorithms. So I think I need a benchmark and algorithm comparision, and I decide to write my own repository.&lt;br&gt;I think writing code is going to be painful, so I need to write down the pains I have. By the way, I’m using tensorflow and gym together.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="YADQN" scheme="http://seraphli.github.io/categories/YADQN/"/>
+    
+    
+      <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+      <category term="Note" scheme="http://seraphli.github.io/tags/Note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Build Up A New Personal Blog</title>
+    <link href="http://seraphli.github.io/posts/73bba9d9/"/>
+    <id>http://seraphli.github.io/posts/73bba9d9/</id>
+    <published>2017-03-23T15:40:00.000Z</published>
+    <updated>2017-04-06T08:59:32.660Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Why-build-a-new-site&quot;&gt;&lt;a href=&quot;#Why-build-a-new-site&quot; class=&quot;headerlink&quot; title=&quot;Why build a new site&quot;&gt;&lt;/a&gt;Why build a new site&lt;/h2&gt;&lt;p&gt;When I decide to write code about reinforcement learning, I notice there is just few website about reinforcement learning. And I want to share my experiences in RL. So when I look back, I would consider this as some kind of legacies. I would be &lt;strong&gt;happy&lt;/strong&gt; if some one really get helps from this site.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Website" scheme="http://seraphli.github.io/categories/Website/"/>
+    
+    
+      <category term="Note" scheme="http://seraphli.github.io/tags/Note/"/>
+    
+      <category term="Hexo" scheme="http://seraphli.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>

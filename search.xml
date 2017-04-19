@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[DiablOS Simulator Todo List]]></title>
+      <url>http://seraphli.github.io/posts/1d834600/</url>
+      <content type="html"><![CDATA[<ul>
+<li>[ ] Change TKinter to pygame</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> DiablOS </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Todo List </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Use Cython to Build Code]]></title>
+      <url>http://seraphli.github.io/posts/433d1379/</url>
+      <content type="html"><![CDATA[<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><ol>
+<li>Build your code like a module, and change file name .py to .pyx</li>
+<li>Add setup.py in your folder</li>
+<li>Add code in setup.py<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</div><div class="line"><span class="keyword">from</span> Cython.Build <span class="keyword">import</span> cythonize</div><div class="line"></div><div class="line">setup(</div><div class="line">  name = <span class="string">'Your App Name'</span>,</div><div class="line">  ext_modules = cythonize(<span class="string">"your_code.pyx"</span>),</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Remeber to change <code>name</code> and <code>ext_modules</code></p>
+<ol>
+<li>Run <code>python setup.py build_ext --inplace</code> to build code into .so file</li>
+<li>Add a new file, which will import your lib and run the code<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import your_code</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h2><p><a href="http://cython.readthedocs.io/en/latest/src/quickstart/build.html" target="_blank" rel="external">Official Guide</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Cython </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[RL Tutorial #1]]></title>
+      <url>http://seraphli.github.io/posts/2cffd86/</url>
+      <content type="html"><![CDATA[<h2 id="What’s-Reinforcement-Learning"><a href="#What’s-Reinforcement-Learning" class="headerlink" title="What’s Reinforcement Learning"></a>What’s Reinforcement Learning</h2><p>One sentence to define reinforcement learning: the goal of RL is to find out a better policy to get more rewards from environment based on our current state, experience in the past, expectation and exploration in the future.</p>
+<a id="more"></a>
+<p>Here are some important concept:</p>
+<ol>
+<li>We: Intelligent agents, human or robot.</li>
+<li>Policy: The way we make decisions.</li>
+<li>Reward: Critiria about how well we did.</li>
+<li>Environment: Where we can get our states and rewards.</li>
+<li>State: Current situation we are in.</li>
+<li>Experience: How we choose to react and how many rewards the environment gives us.</li>
+<li>Expectation: Before we make a decision, we will consider how many rewards we will get by doing this.</li>
+<li>Exploration: We sometimes will try a new action, and watch the result.</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Tutorial </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> RL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Resource Collection About RL]]></title>
+      <url>http://seraphli.github.io/posts/687582fb/</url>
+      <content type="html"><![CDATA[<h2 id="Book"><a href="#Book" class="headerlink" title="Book"></a>Book</h2><ol>
+<li>Reinforcement Learning: An Introduction<br> <a href="http://incompleteideas.net/sutton/book/the-book-2nd.html" target="_blank" rel="external">Online draft</a></li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Collection </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> RL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[YADQN Note #2]]></title>
+      <url>http://seraphli.github.io/posts/56c32fc8/</url>
+      <content type="html"><![CDATA[<h2 id="Reminder"><a href="#Reminder" class="headerlink" title="Reminder"></a>Reminder</h2><ol>
+<li>The game “Breakout” is in <a href="https://gym.openai.com/envs/Breakout-v0" target="_blank" rel="external">here</a>. The observation is an array of shape (210, 160, 3).</li>
+<li>Because preprocess part needs to record several image, which need a queue, so it can not be just one function. As I browse the documemt of tensorflow, I think I find a queue construction in tensorflow. Maybe I can try that.</li>
+<li>The queues in tensorflow can be found <a href="https://www.tensorflow.org/programmers_guide/threading_and_queues" target="_blank" rel="external">here</a>.</li>
+<li>One more clear example about queues in tensorflow is <a href="http://www.voidcn.com/blog/lujiandong1/article/p-6325966.html" target="_blank" rel="external">here</a>.</li>
+<li><p>If you test tensorflow gpu code in PyCharm, you will get the error <code>ImportError: libcudart.so.8.0: cannot open shared object file: No such file or directory</code>. That’s because PyCharm don’t have the path variable set correctly. Path variable like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">PATH=/usr/local/cuda/bin:$PATH</div><div class="line">CUDA_HOME=/usr/local/cuda</div><div class="line">LD_LIBRARY_PATH=/usr/local/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH</div></pre></td></tr></table></figure>
+<p>Location need to be set:<br><code>Setting-&gt;Build, Execution, Deployment-&gt;Console-&gt;Python Console</code><br><code>Run-&gt;Edit Configurations</code>: <code>Defaults-&gt;Python</code> and <code>Defaults-&gt;Python tests-&gt;Unittests</code>. Delete no default settings, and it will generate setting again based on default settings.</p>
+</li>
+<li>Use <a href="https://www.tensorflow.org/api_docs/python/tf/stack" target="_blank" rel="external">tf.stack</a> to stack image. It will convert numpy.narray into tensor.</li>
+<li>Although observation from gym may seem empty when you print this variable, it actually is not empty. And you don’t have to render the game UI.</li>
+<li>You can use <code>tf.image.convert_image_dtype</code> to convert image.</li>
+<li>Y channel in the paper just means converting RGB image into grayscale image.</li>
+<li><code>PIL.Image.Show()</code> don’t show any window. Solution: <code>sudo apt-get install imagemagick</code>. <a href="http://stackoverflow.com/questions/16279441/image-show-wont-display-the-picture" target="_blank" rel="external">Reference</a>. <code>Image.fromarray</code> need uint8 image.</li>
+<li>Maybe using queue is not a good idea, because we need to get 4 images in one time.</li>
+<li>There is a timeline module which can be imported using <code>from tensorflow.python.client import timeline</code>. <a href="http://www.cnblogs.com/xuchenCN/p/5888646.html" target="_blank" rel="external">Reference</a>.</li>
+<li>You can not use <code>tf.layers.conv2d</code> function because this function don’t contain <code>collection_name</code> parameter. It will cause some troubles when trying to replace network parameters.</li>
+<li><a href="http://web.stanford.edu/class/cs20si/lectures/slides_14.pdf" target="_blank" rel="external">Here</a> are some codes about epsilon decay. It also contain experience replay code.</li>
+<li>A strange thing: when the action is <code>0</code>, the environment of openai gym don’t change; when the action is <code>1</code>, the agent’s action is waiting.</li>
+<li>This <a href="https://github.com/ppwwyyxx/tensorpack" target="_blank" rel="external">repo</a> contain <a href="https://github.com/ppwwyyxx/tensorpack/tree/master/examples/DeepQNetwork" target="_blank" rel="external">dqn</a> and <a href="https://github.com/ppwwyyxx/tensorpack/tree/master/examples/A3C-Gym" target="_blank" rel="external">a3c</a>.</li>
+<li>Python <code>with</code> statement, <code>contextmanager</code> and <code>yield</code>, <a href="http://preshing.com/20110920/the-python-with-statement-by-example/" target="_blank" rel="external">link</a>.</li>
+<li>Avoid <code>sess.run</code> will significantly improve the performance.</li>
+<li><code>env.render()</code> raise an error. Because you can not call initialization of tensorflow before <code>env.render()</code>. <a href="https://github.com/openai/gym/issues/418" target="_blank" rel="external">Reference</a>.</li>
+<li>In tensorflow, you have to define all ops in the beginning, otherwise memory usage will continuously increase. Use <code>sess.graph.finalize()</code> to see if you define ops below finalize.</li>
+<li>Tensorflow will only update variable after <code>sess.run(ops)</code>, no matter how <code>op</code> in <code>ops</code> arrange.</li>
+<li><p>You have to excute some operations before others.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self._sess.run(self._max_img_update, feed_dict=&#123;self._input: input_img&#125;)</div><div class="line">self._sess.run(self._update, feed_dict=&#123;self._input: input_img&#125;)</div></pre></td></tr></table></figure>
+<p>If you excute maximizing two images and excute storing last image in the same time, it will result in <code>_max_img</code> and <code>_last</code> have same value.</p>
+</li>
+<li>After define all operation before <code>sess.graph.finalize()</code>, the code run much faster than before, and there is no memory leak problem.</li>
+<li><p>While using deque as buffer of experience replay, there is a <a href="http://stackoverflow.com/questions/40181284/how-to-get-random-sample-from-deque-in-python-3" target="_blank" rel="external">problem</a> related to python version. There is no problem when you use python 2.7 or 3.5, but you will get a error while using python 3.4. Update my environment to python 3.5 fix this problem. But still there are some dependency needed to be installed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libssl-dev</div><div class="line">sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev</div></pre></td></tr></table></figure>
+</li>
+<li><p>Running this code require about 6GB memory for the experience replay. So I upgrade my PC building.</p>
+</li>
+<li>While training, loss always stay low, but the performance of the network is not well.</li>
+<li><a href="https://github.com/openai/gym/issues/185" target="_blank" rel="external">Example</a> about how to set the speed of environment in openai gym. But configure method has been removed, but you can set mode in render method. And disable rendering game will speed up the training process.</li>
+<li>Deque size larger than 65535 may cause memory exploded.</li>
+<li>Strange thing is that I have to wait for about 100000 runs of game, and there is no improvement of the performance.</li>
+<li>One transition in experience replay will take <span>$4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800$</span><!-- Has MathJax --> Bytes, which is about 220KB.</li>
+<li>Some repositories about DQN are using another memory mechanism. They store <code>(s, a, r, is_terminal)</code> in memory, and <code>s</code> just contains one image. So the memory requirement of experience replay is reduced significantly. So I intend to implement this in my code.</li>
+</ol>
+<h2 id="Changes"><a href="#Changes" class="headerlink" title="Changes"></a>Changes</h2><ol>
+<li><code>squared gradient momentum</code> and <code>min squared momentum</code> can not be found in tensorflow. So this two values are not presented in code.</li>
+<li>Because the code require too much memory, I change the experience replay size from 1000000 to 100000, replay start size from 50000 to 5000, and others remain the same.</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> YADQN </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> RL </tag>
+            
+            <tag> Note </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[YADQN Todo List]]></title>
+      <url>http://seraphli.github.io/posts/4656ea70/</url>
+      <content type="html"><![CDATA[<h2 id="Stage-1"><a href="#Stage-1" class="headerlink" title="Stage #1"></a>Stage #1</h2><p>In this stage I will use a specific game, “Breakout”, to test the whole structure. </p>
+<ul>
+<li>[x] Figure out the observation given by openai gym.</li>
+<li>[x] Complete preprocessing part.</li>
+<li>[x] Model architecture build.</li>
+<li>[x] Network parameter replace mechanism.</li>
+<li>[x] Original experience replay.</li>
+<li>[x] Epsilon decay.</li>
+<li>[x] Link all part.</li>
+<li>[x] Add debug information output.</li>
+<li>[x] Save session parameter.</li>
+<li>[ ] Random start (no op).</li>
+<li>[ ] Test algorithm on game “Breakout”.</li>
+<li>[ ] Configuration setup for algorithm.</li>
+</ul>
+<h2 id="Stage-2"><a href="#Stage-2" class="headerlink" title="Stage #2"></a>Stage #2</h2><p>In this stage I will continue building some parts for DQN.</p>
+<ul>
+<li>[ ] Add Tensorflow tensorboard support.</li>
+<li>[x] Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)</li>
+<li>[x] Test on all games mentioned in the paper. (Same reason)</li>
+<li>[x] Generate last three column of Extended Data Table 2. (Same reason)</li>
+</ul>
+<h2 id="Stage-3"><a href="#Stage-3" class="headerlink" title="Stage #3"></a>Stage #3</h2><ul>
+<li>[ ] Implement another memory mechanism</li>
+<li>[ ] Double DQN Implement</li>
+<li>[ ] Prioritized Experience Replay</li>
+<li>[ ] Dueling network</li>
+<li>[ ] DQfD</li>
+</ul>
+<h2 id="DQfQ"><a href="#DQfQ" class="headerlink" title="DQfQ"></a>DQfQ</h2><ul>
+<li>[ ] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> YADQN </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Todo List </tag>
+            
+            <tag> RL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[YADQN Note #1]]></title>
+      <url>http://seraphli.github.io/posts/8c38ea69/</url>
+      <content type="html"><![CDATA[<h2 id="Things"><a href="#Things" class="headerlink" title="Things"></a>Things</h2><p>I will going to build the algorithm known as DQN. I decide to use <a href="https://gym.openai.com/" target="_blank" rel="external">openai gym</a> to reproduce the result described in <a href="http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html" target="_blank" rel="external">Human-level control through deep reinforcement learning</a>. The article can be download from <a href="https://www.cs.swarthmore.edu/~meeden/cs63/s15/nature15b.pdf" target="_blank" rel="external">here</a> for free.<br>I notice that there are so many repositories about DQN, but a lot of them don’t generate any benchmark for algorithms. So I think I need a benchmark and algorithm comparision, and I decide to write my own repository.<br>I think writing code is going to be painful, so I need to write down the pains I have. By the way, I’m using tensorflow and gym together.<br><a id="more"></a></p>
+<h2 id="DQN"><a href="#DQN" class="headerlink" title="DQN"></a>DQN</h2><p>The main goal of DQN is to estimate accumulate reward, known as Q-value, using deep neural network. The algorithm consists of several parts.</p>
+<ol>
+<li>Preprocessing<br><code>Working directly with raw Atari 2600 frames</code>, we need to convert <span>$210 \times 160 \times 3$</span><!-- Has MathJax --> pixel images into <span>$84 \times 84 \times 4$</span><!-- Has MathJax --> input vectors.</li>
+<li>Neural Network<br>Input demension of network is <span>$84 \times 84 \times 4$</span><!-- Has MathJax -->. <code>The output layer is a fully-connected linear layer with a single output for each valid action. The number of valid actions varied between 4 and 18 on the games we considered.</code></li>
+<li>Experience Replay<br>Store the transition in a memory.</li>
+</ol>
+<p>The whole algorithm in the paper.</p>
+<blockquote>
+<p><strong>Deep Q-learning with experience replay</strong><br>Initialize replay memory <span>$D$</span><!-- Has MathJax --> to capacity <span>$N$</span><!-- Has MathJax --><br>Initialize action-value function <span>$Q$</span><!-- Has MathJax --> with random weights <span>$\theta$</span><!-- Has MathJax --><br>Initialize target action-value function <span>$\hat{Q}$</span><!-- Has MathJax --> with weights <span>$\theta^- = \theta$</span><!-- Has MathJax --><br><strong>For</strong> episode = <span>$1, M$</span><!-- Has MathJax --> <strong>do</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;Initialize sequence <span>$s_1=\{x_1\}$</span><!-- Has MathJax --> and preprocessed sequence <span>$\phi_1 = \phi(s_1)$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>For</strong> <span>$t$</span><!-- Has MathJax --> = <span>$1, T$</span><!-- Has MathJax --> <strong>do</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With probability <span>$\varepsilon$</span><!-- Has MathJax --> select a random action <span>$a_t$</span><!-- Has MathJax -->, otherwise select <span>$a_t = \arg\max_a Q(\phi(S_t), a; \theta)$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execute action <span>$a_t$</span><!-- Has MathJax --> in emulator and observe reward <span>$r_t$</span><!-- Has MathJax --> and image <span>$x_{t+1}$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set <span>$s_{t+1} = s_t, a_t, x_{t+1}$</span><!-- Has MathJax --> and preprocess <span>$\phi_{t+1} = \phi(s_{t+1})$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Store transition <span>$(\phi_t, a_t, r_t, \phi_{t+1})$</span><!-- Has MathJax --> in <span>$D$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sample random minibatch of transitions <span>$(\phi_j, a_j, r_j, \phi_{j+1})$</span><!-- Has MathJax --> from <span>$D$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set <span>$y_j = \left\{ \begin{matrix} r_j &amp; \mbox{if episode terminates at step j+1} \\ r_j+\gamma \max_{a&apos;} \hat{Q}(\phi_j, a&apos;; \theta^-) &amp; \mbox{otherwise} \end{matrix} \right.$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perform a gradient descent step on <span>$(y_j-Q(\phi_j,a_j;\theta))^2$</span><!-- Has MathJax --> with respect to the network parameters <span>$\theta$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every <span>$C$</span><!-- Has MathJax --> steps reset <span>$\hat{Q}=Q$</span><!-- Has MathJax --><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>End For</strong><br><strong>End For</strong></p>
+</blockquote>
+<h3 id="Preprocessing"><a href="#Preprocessing" class="headerlink" title="Preprocessing"></a>Preprocessing</h3><blockquote>
+<p>First, to encode a single frame we take the maximum value for each pixel colour value over the frame being encoded and the previous frame. This was necessary to remove flickering that is present in games where some objects appear only in even frames while other objects appear only in odd frames, an artefact caused by the limited number of sprites Atari 2600 can display at once.</p>
+</blockquote>
+<p>So in order to encode a single frame, we need two frames, current frame and previous frame, which will be stored in a queue.</p>
+<h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><h4 id="Model-Architecture"><a href="#Model-Architecture" class="headerlink" title="Model Architecture"></a>Model Architecture</h4><ol>
+<li>input layer <span>$84 \times 84 \times 4$</span><!-- Has MathJax -->.</li>
+<li>conv2d, <span>$8 \times 8$</span><!-- Has MathJax --> kernel size with stride 4, 32 kernels, relu.</li>
+<li>conv2d, <span>$4 \times 4$</span><!-- Has MathJax --> kernel size with stride 2, 64 kernels, relu.</li>
+<li>conv2d, <span>$3 \times 3$</span><!-- Has MathJax --> kernel size with stride 1, 64 kernels, relu.</li>
+<li>full-connected, 512 rectifier units.</li>
+<li>output layer,  a single output for each valid action, varied between 4 and 18 on the games.</li>
+</ol>
+<h4 id="Parameters-Update"><a href="#Parameters-Update" class="headerlink" title="Parameters Update"></a>Parameters Update</h4><blockquote>
+<p>More precisely, every C updates we clone the network Q to obtain a target network <span>$\hat{Q}$</span><!-- Has MathJax -->and use <span>$\hat{Q}$</span><!-- Has MathJax --> % for generating the Q-learning targets <span>$y_j$</span><!-- Has MathJax --> for the following C updates to Q.</p>
+</blockquote>
+<h3 id="Experience-Replay"><a href="#Experience-Replay" class="headerlink" title="Experience Replay"></a>Experience Replay</h3><blockquote>
+<p>First, we use a technique known as experience replay in which we store the agent’s experiences at each time-step, <span>$e_t = (s_t, a_t, r_t, s_{t+1})$</span><!-- Has MathJax -->, in a dataset <span>$D_t = \{e_1, \dots ,e_t\}$</span><!-- Has MathJax -->, pooled over many episodes (where the end of an episode occurs when a terminal state is reached) into a replay memory.<br>In practice, our algorithm only stores the last <span>$N$</span><!-- Has MathJax --> experience tuples in the replay memory,and samples uniformly at random from <span>$D$</span><!-- Has MathJax --> when performing updates.This approach is in some respects limited because the memory buffer does not differentiate important transitions and always overwrites with recent transitions owing to the finite memory size <span>$N$</span><!-- Has MathJax -->.</p>
+</blockquote>
+<p>And there is a improvement of experience replay.</p>
+<blockquote>
+<p>A more sophisticated sampling strategy might emphasize transitions from which we can learn the most, similar to prioritized sweeping.</p>
+</blockquote>
+<h2 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h2><ol>
+<li><p>Replace network parameters<br>Here I find some elegant code about replacing the parameters of target network. First, set a collection name, <a href="https://github.com/MorvanZhou/tutorials/blob/master/Reinforcement_learning_TUT/5_Deep_Q_Network/DQN_modified.py#L96" target="_blank" rel="external">example</a>. Second, while using <code>get_varible</code>, set the collection name, <a href="https://github.com/MorvanZhou/tutorials/blob/master/Reinforcement_learning_TUT/5_Deep_Q_Network/DQN_modified.py#L69" target="_blank" rel="external">example</a>. Third, get all varibles in the collection using <code>get_collection</code>, <a href="https://github.com/MorvanZhou/tutorials/blob/master/Reinforcement_learning_TUT/5_Deep_Q_Network/DQN_modified.py#L132" target="_blank" rel="external">example</a>.</p>
+</li>
+<li><p>Replay memory<br>Here is a lecture about reinforcemnt learning and its tensorflow implement. The whole lesson can be found <a href="http://web.stanford.edu/class/cs20si/lectures/slides_14.pdf" target="_blank" rel="external">here</a>. This class is called <code>CS 20SI: Tensorflow for Deep Learning Research</code>, and you can find more information <a href="http://web.stanford.edu/class/cs20si/" target="_blank" rel="external">here</a>.</p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> YADQN </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> RL </tag>
+            
+            <tag> Note </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Build Up A New Personal Blog]]></title>
+      <url>http://seraphli.github.io/posts/73bba9d9/</url>
+      <content type="html"><![CDATA[<h2 id="Why-build-a-new-site"><a href="#Why-build-a-new-site" class="headerlink" title="Why build a new site"></a>Why build a new site</h2><p>When I decide to write code about reinforcement learning, I notice there is just few website about reinforcement learning. And I want to share my experiences in RL. So when I look back, I would consider this as some kind of legacies. I would be <strong>happy</strong> if some one really get helps from this site.</p>
+<a id="more"></a>
+<h2 id="Building-process"><a href="#Building-process" class="headerlink" title="Building process"></a>Building process</h2><p>It takes about two days to build this site. First I was trying to build a static site with jekyll, which is written in Ruby. But I saw most people recommended hexo, so I deleted the repo and switched to hexo.</p>
+<p>Although it seems easy on the official website, it still has so much parts to customize, like selecting a theme. I spent about half the day and found this theme called “Yelee”. But it don’t have the functionality to count visit, so I spent 6 hours writing my own site visit counter, using leancloud.</p>
+<h2 id="What-packages-I-install"><a href="#What-packages-I-install" class="headerlink" title="What packages I install"></a>What packages I install</h2><ol>
+<li>hexo-abbrlink</li>
+<li>hexo-admin</li>
+<li>hexo-deployer-git</li>
+<li>hexo-generator-seo-friendly-sitemap</li>
+<li>hexo-browsersync</li>
+<li>hexo-math</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save hexo-abbrlink hexo-admin hexo-deployer-git hexo-generator-seo-friendly-sitemap hexo-browsersync hexo-math</div></pre></td></tr></table></figure>
+<h2 id="Some-mistakes-I-made-when-building"><a href="#Some-mistakes-I-made-when-building" class="headerlink" title="Some mistakes I made when building"></a>Some mistakes I made when building</h2><ol>
+<li>YAML need to add a space after colon</li>
+<li>Don’t add permalink in tags page, which will disable tags cloud</li>
+<li>On windows, if you can not open the page <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>, you should try to use another port, i.e. <code>hexo s -p 3600</code>, and it works for me.</li>
+<li><p>Mathjax can not be render in hexo is just because underscore character <code>_</code> will be translate in markdown, so the equation will miss <code>_</code> when rendering with Mathjax. Solution: install hexo-math, and add</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure>
+<p>around the equation, <a href="https://github.com/akfish/hexo-math" target="_blank" rel="external">more</a>. Or just use <code>\_</code> to escape the markdown render.</p>
+</li>
+<li>Don’t use local package of MathJax, because the website on github will have render problem.</li>
+</ol>
+<h2 id="Next-thing-I-need-to-do"><a href="#Next-thing-I-need-to-do" class="headerlink" title="Next thing I need to do"></a>Next thing I need to do</h2><ul>
+<li>[x] Write page count code.</li>
+<li>[x] Change avatar.</li>
+<li>[x] Process background images in photoshop.</li>
+<li>[x] Change background.</li>
+<li>[x] Build up my own categories page using <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="external">API</a>, <a href="http://moxfive.xyz/2015/10/25/hexo-tag-cloud/" target="_blank" rel="external">ref</a>.</li>
+<li>[x] Add bitbuket icon.</li>
+<li>[x] Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to “left stands for previous and right stands for next”. Fix: it is a issue of hexo. <a href="https://github.com/hexojs/hexo/issues/2474" target="_blank" rel="external">Issue related</a>.</li>
+<li>[x] Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about <code>.article-entry &gt; ol:last-child</code>, just delete it, otherwise it will render every article’s last list in a different way, which is quite annoying.</li>
+<li>[x] Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)</li>
+<li>[x] Add Natsume Yuujinchou wallpapers.</li>
+<li>[x] Add Game of Throne wallpapers.</li>
+<li>[x] Add Assassin’s Creed lines in About page.</li>
+<li>[ ] Process the image <code>Initiation Ceremony</code>.</li>
+</ul>
+<h2 id="Just-a-reminder"><a href="#Just-a-reminder" class="headerlink" title="Just a reminder"></a>Just a reminder</h2><ol>
+<li>git clone blog repository</li>
+<li>cnpm install</li>
+<li>cnpm install -g hexo-cli</li>
+<li>Replace <code>node_modules/hexo/lib/plugins/generator/post.js</code> with <code>post.js</code>. <a href="https://github.com/hexojs/hexo/issues/2474" target="_blank" rel="external">Issue related</a>.</li>
+<li><p>The plugin <code>hexo_deployer_git</code> is not working well. I have to set the config in <code>.deploy_git/.git</code> manually.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[branch &quot;master&quot;]</div><div class="line">  remote = https://github.com/Seraphli/seraphli.github.io.git</div><div class="line">  merge = refs/heads/master</div><div class="line">[credential]</div><div class="line">  helper = store</div><div class="line">[receive]</div><div class="line">  denyNonFastforwards = false # change to false to enable overwriting</div></pre></td></tr></table></figure>
+</li>
+<li><p>Because I try to use the local package of MathJax, hexo need to monitor more files, which will cause a error <code>FATAL watch ENOSPC</code>.<br>Solution:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee <span class="_">-a</span> /etc/sysctl.conf &amp;&amp; sudo sysctl -p</div></pre></td></tr></table></figure>
+<p>Which will set the limitation of file watches to a higher one.<br>PS: This problem may be caused by BrowserSync plugin. And use MathJax in local package will cause hexo react slower.</p>
+</li>
+<li>A latex symbol list, <a href="http://latex.wikia.com/wiki/List_of_LaTeX_symbols" target="_blank" rel="external">here</a>. <a href="http://reu.dimacs.rutgers.edu/Symbols.pdf" target="_blank" rel="external">PDF version</a>, need to overcome GFW.</li>
+<li>Indent in block quote using <code>&amp;nbsp;</code>, <a href="https://christianity.meta.stackexchange.com/questions/2055/is-it-possible-to-indent-within-a-markdown-block-quote" target="_blank" rel="external">ref</a>.</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Website </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Note </tag>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
