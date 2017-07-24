@@ -14,17 +14,19 @@
 <meta name="author" content="SErAphLi" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cyber Assassin Guild">
-<meta property="og:url" content="http://seraphli.github.io/index.html">
+<meta name="description" content="Notes with new idea">
+<meta name="keywords" content="RL,Note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="YADQN Note #3">
+<meta property="og:url" content="http://seraphli.github.io/posts/21c41f5e/index.html">
 <meta property="og:site_name" content="Cyber Assassin Guild">
+<meta property="og:description" content="Notes with new idea">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-07-24T03:17:07.914Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cyber Assassin Guild">
+<meta name="twitter:title" content="YADQN Note #3">
+<meta name="twitter:description" content="Notes with new idea">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,13 +54,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Cyber Assassin Guild</title>
+<title>YADQN Note #3 | Cyber Assassin Guild</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +67,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -258,24 +258,13 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-YADQN-Note-3" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-YADQN-Note-3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/posts/21c41f5e/" class="article-date">
       <time datetime="2017-04-23T14:25:06.000Z" itemprop="datePublished">2017-04-23</time>
 </a>
 
- 
-    <a href="/posts/21c41f5e/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/21c41f5e/"></span>
-        
-    </a>
 
     </div>
   
@@ -287,671 +276,173 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/21c41f5e/">YADQN Note #3</a>
+    <h1 class="article-title" itemprop="name">
+      YADQN Note #3
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              Notes with new idea
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/YADQN/">YADQN</a>
     </div>
 
 
-      
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RL/">RL</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/posts/21c41f5e/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-DiablOS-Simulator-Todo-List" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/1d834600/" class="article-date">
-      <time datetime="2017-04-19T03:28:27.000Z" itemprop="datePublished">2017-04-19</time>
-</a>
-
- 
-    <a href="/posts/1d834600/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/1d834600/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/1d834600/">DiablOS Simulator Todo List</a>
-    </h1>
-  
-
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ul>
-<li style="list-style: none"><input type="checkbox"> Change TKinter to pygame</li>
-</ul>
+        <p>In the process of implementing DQN and related algorithm, my understanding of these algorithms was greatly improved. In the beginning my algorithm can not run the code with replay size of 1000000. And now the code is able to run such configuration just using about 1GB memory.</p>
+<p>Now I’m coming up with a new idea, a memory with baseline. I’m first going to implement deuling network and double q learning, and with these improvement, I will test my memory implement.</p>
 
       
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/DiablOS/">DiablOS</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Todo-List/">Todo List</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Use-Cython-to-Build-code" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/433d1379/" class="article-date">
-      <time datetime="2017-03-29T01:35:35.000Z" itemprop="datePublished">2017-03-29</time>
-</a>
-
- 
-    <a href="/posts/433d1379/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/433d1379/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/433d1379/">Use Cython to Build Code</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              Use cython to build code
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Notes/">Notes</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cython/">Cython</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/433d1379/#more">more >></a>
+    <div class="copyright">
+        <p><span>Title:</span><a href="/posts/21c41f5e/">YADQN Note #3</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">SErAphLi</a></p>
+        <p><span>Created:</span>2017-04-23, 22:25:06</p>
+        <p><span>Updated:</span>2017-07-24, 11:17:07</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/posts/21c41f5e/" title="YADQN Note #3">http://seraphli.github.io/posts/21c41f5e/</a>
+            <span class="copy-path" data-clipboard-text="From http://seraphli.github.io/posts/21c41f5e/　　By SErAphLi" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-RL-Tutorial-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/2cffd86/" class="article-date">
-      <time datetime="2017-03-28T13:06:00.000Z" itemprop="datePublished">2017-03-28</time>
-</a>
-
- 
-    <a href="/posts/2cffd86/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/2cffd86/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/2cffd86/">RL Tutorial #1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="What’s-Reinforcement-Learning"><a href="#What’s-Reinforcement-Learning" class="headerlink" title="What’s Reinforcement Learning"></a>What’s Reinforcement Learning</h2><p>One sentence to define reinforcement learning: the goal of RL is to find out a better policy to get more rewards from environment based on our current state, experience in the past, expectation and exploration in the future.</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RL/">RL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/2cffd86/#more">more >></a>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/posts/1d834600/">
+                    DiablOS Simulator Todo List
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-Resource-Collection-About-RL" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/687582fb/" class="article-date">
-      <time datetime="2017-03-27T15:01:11.000Z" itemprop="datePublished">2017-03-27</time>
-</a>
-
- 
-    <a href="/posts/687582fb/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
         
+            
         
-            <span class="disqus-comment-count" data-disqus-identifier="posts/687582fb/"></span>
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"YADQN Note #3　| Cyber Assassin Guild　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://seraphli.github.io/posts/21c41f5e/';
+            this.page.identifier = 'posts/21c41f5e/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//seraphli.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/687582fb/">Resource Collection About RL</a>
-    </h1>
-  
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              Resource collection about reinforcement learning
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Collection/">Collection</a>
-    </div>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RL/">RL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/687582fb/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-YADQN-Note-2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/56c32fc8/" class="article-date">
-      <time datetime="2017-03-27T14:20:24.000Z" itemprop="datePublished">2017-03-27</time>
-</a>
-
- 
-    <a href="/posts/56c32fc8/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
         
+            <a href="/posts/1d834600/" title="Next: DiablOS Simulator Todo List">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-            <span class="disqus-comment-count" data-disqus-identifier="posts/56c32fc8/"></span>
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/21c41f5e/">YADQN Note #3</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
+
+
+
+
+    <script>
         
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/56c32fc8/">YADQN Note #2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              Notes while building YADQN
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/YADQN/">YADQN</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RL/">RL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/56c32fc8/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-YADQN-Todo-List" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/4656ea70/" class="article-date">
-      <time datetime="2017-03-27T14:04:21.000Z" itemprop="datePublished">2017-03-27</time>
-</a>
-
- 
-    <a href="/posts/4656ea70/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/4656ea70/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/4656ea70/">YADQN Todo List</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              Here I list things and plans need to do about YADQN.
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/YADQN/">YADQN</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RL/">RL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Todo-List/">Todo List</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/4656ea70/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-YADQN-Note-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/8c38ea69/" class="article-date">
-      <time datetime="2017-03-25T12:17:00.000Z" itemprop="datePublished">2017-03-25</time>
-</a>
-
- 
-    <a href="/posts/8c38ea69/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/8c38ea69/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/8c38ea69/">YADQN Note #1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="Things"><a href="#Things" class="headerlink" title="Things"></a>Things</h2><p>I will going to build the algorithm known as DQN. I decide to use <a href="https://gym.openai.com/" target="_blank" rel="external">openai gym</a> to reproduce the result described in <a href="http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html" target="_blank" rel="external">Human-level control through deep reinforcement learning</a>. The article can be download from <a href="https://www.cs.swarthmore.edu/~meeden/cs63/s15/nature15b.pdf" target="_blank" rel="external">here</a> for free.<br>I notice that there are so many repositories about DQN, but a lot of them don’t generate any benchmark for algorithms. So I think I need a benchmark and algorithm comparision, and I decide to write my own repository.<br>I think writing code is going to be painful, so I need to write down the pains I have. By the way, I’m using tensorflow and gym together.<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/YADQN/">YADQN</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RL/">RL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/8c38ea69/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-new-site-up" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/posts/73bba9d9/" class="article-date">
-      <time datetime="2017-03-23T15:40:00.000Z" itemprop="datePublished">2017-03-23</time>
-</a>
-
- 
-    <a href="/posts/73bba9d9/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="posts/73bba9d9/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/73bba9d9/">Build Up A New Personal Blog</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="Why-build-a-new-site"><a href="#Why-build-a-new-site" class="headerlink" title="Why build a new site"></a>Why build a new site</h2><p>When I decide to write code about reinforcement learning, I notice there is just few website about reinforcement learning. And I want to share my experiences in RL. So when I look back, I would consider this as some kind of legacies. I would be <strong>happy</strong> if some one really get helps from this site.</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Website/">Website</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/posts/73bba9d9/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -1015,26 +506,6 @@
     </script>
 
 
-
-    
-
-    
-        <script id="dsq-count-scr" src="//seraphli.disqus.com/count.js" async></script>
-        <script>
-            if ($(".left-col").is(":visible")) {
-                var $disqusCount = $(".disqus-comment-count");
-                $disqusCount.bind("DOMNodeInserted", function(e) {
-                    var num = $(this).text().replace(/[^0-9]/ig,"");
-                    if (num > 0) {
-                        $(this).siblings(".count-comment").text(num);
-                    }
-                    $(this).remove();
-                })
-            } else {
-                $(".disqus-comment-count").remove();
-            }
-        </script>
-     
 
 
 <!-- Google Analytics -->

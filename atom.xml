@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://seraphli.github.io/"/>
-  <updated>2017-04-19T03:31:39.939Z</updated>
+  <updated>2017-07-24T03:17:07.914Z</updated>
   <id>http://seraphli.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>YADQN Note #3</title>
+    <link href="http://seraphli.github.io/posts/21c41f5e/"/>
+    <id>http://seraphli.github.io/posts/21c41f5e/</id>
+    <published>2017-04-23T14:25:06.000Z</published>
+    <updated>2017-07-24T03:17:07.914Z</updated>
+    
+    <summary type="html">
+    
+      Notes with new idea
+    
+    </summary>
+    
+      <category term="YADQN" scheme="http://seraphli.github.io/categories/YADQN/"/>
+    
+    
+      <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+      <category term="Note" scheme="http://seraphli.github.io/tags/Note/"/>
+    
+  </entry>
   
   <entry>
     <title>DiablOS Simulator Todo List</title>
@@ -25,7 +47,7 @@
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;[ ] Change TKinter to pygame&lt;/li&gt;
+&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Change TKinter to pygame&lt;/li&gt;
 &lt;/ul&gt;
 
     
@@ -105,7 +127,7 @@
     <link href="http://seraphli.github.io/posts/56c32fc8/"/>
     <id>http://seraphli.github.io/posts/56c32fc8/</id>
     <published>2017-03-27T14:20:24.000Z</published>
-    <updated>2017-04-19T07:44:55.163Z</updated>
+    <updated>2017-07-24T03:17:07.914Z</updated>
     
     <summary type="html">
     
@@ -127,7 +149,7 @@
     <link href="http://seraphli.github.io/posts/4656ea70/"/>
     <id>http://seraphli.github.io/posts/4656ea70/</id>
     <published>2017-03-27T14:04:21.000Z</published>
-    <updated>2017-04-19T08:53:53.991Z</updated>
+    <updated>2017-07-24T03:17:07.914Z</updated>
     
     <summary type="html">
     
@@ -138,9 +160,9 @@
       <category term="YADQN" scheme="http://seraphli.github.io/categories/YADQN/"/>
     
     
-      <category term="Todo List" scheme="http://seraphli.github.io/tags/Todo-List/"/>
-    
       <category term="RL" scheme="http://seraphli.github.io/tags/RL/"/>
+    
+      <category term="Todo List" scheme="http://seraphli.github.io/tags/Todo-List/"/>
     
   </entry>
   
@@ -153,7 +175,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Things&quot;&gt;&lt;a href=&quot;#Things&quot; class=&quot;headerlink&quot; title=&quot;Things&quot;&gt;&lt;/a&gt;Things&lt;/h2&gt;&lt;p&gt;I will going to build the algorithm known as DQN. I decide to use &lt;a href=&quot;https://gym.openai.com/&quot;&gt;openai gym&lt;/a&gt; to reproduce the result described in &lt;a href=&quot;http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html&quot;&gt;Human-level control through deep reinforcement learning&lt;/a&gt;. The article can be download from &lt;a href=&quot;https://www.cs.swarthmore.edu/~meeden/cs63/s15/nature15b.pdf&quot;&gt;here&lt;/a&gt; for free.&lt;br&gt;I notice that there are so many repositories about DQN, but a lot of them don’t generate any benchmark for algorithms. So I think I need a benchmark and algorithm comparision, and I decide to write my own repository.&lt;br&gt;I think writing code is going to be painful, so I need to write down the pains I have. By the way, I’m using tensorflow and gym together.&lt;br&gt;
+      &lt;h2 id=&quot;Things&quot;&gt;&lt;a href=&quot;#Things&quot; class=&quot;headerlink&quot; title=&quot;Things&quot;&gt;&lt;/a&gt;Things&lt;/h2&gt;&lt;p&gt;I will going to build the algorithm known as DQN. I decide to use &lt;a href=&quot;https://gym.openai.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;openai gym&lt;/a&gt; to reproduce the result described in &lt;a href=&quot;http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Human-level control through deep reinforcement learning&lt;/a&gt;. The article can be download from &lt;a href=&quot;https://www.cs.swarthmore.edu/~meeden/cs63/s15/nature15b.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt; for free.&lt;br&gt;I notice that there are so many repositories about DQN, but a lot of them don’t generate any benchmark for algorithms. So I think I need a benchmark and algorithm comparision, and I decide to write my own repository.&lt;br&gt;I think writing code is going to be painful, so I need to write down the pains I have. By the way, I’m using tensorflow and gym together.&lt;br&gt;
     
     </summary>
     

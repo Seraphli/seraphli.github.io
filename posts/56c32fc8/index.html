@@ -22,7 +22,8 @@
 <meta property="og:url" content="http://seraphli.github.io/posts/56c32fc8/index.html">
 <meta property="og:site_name" content="Cyber Assassin Guild">
 <meta property="og:description" content="Notes while building YADQN">
-<meta property="og:updated_time" content="2017-04-19T07:44:55.163Z">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-07-24T03:17:07.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YADQN Note #2">
 <meta name="twitter:description" content="Notes while building YADQN">
@@ -343,10 +344,12 @@
 <li>One transition in experience replay will take <span>$4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800$</span><!-- Has MathJax --> Bytes, which is about 220KB.</li>
 <li>Some repositories about DQN are using another memory mechanism. They store <code>(s, a, r, is_terminal)</code> in memory, and <code>s</code> just contains one image. So the memory requirement of experience replay is reduced significantly. So I intend to implement this in my code.</li>
 <li>I got this warning today <code>The TensorFlow library wasn&#39;t compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.</code>. And I search it on the net. Some say it means build tensorflow from source can speed up CPU computations. I might try to build one day.</li>
+<li>Using lzma package, you need to compile python with lzma support. <code>sudo apt install build-essential zlib1g-dev libbz2-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev</code></li>
 </ol>
 <h2 id="Changes"><a href="#Changes" class="headerlink" title="Changes"></a>Changes</h2><ol>
 <li><code>squared gradient momentum</code> and <code>min squared momentum</code> can not be found in tensorflow. So this two values are not presented in code.</li>
 <li>Because the code require too much memory, I change the experience replay size from 1000000 to 100000, replay start size from 50000 to 5000, and others remain the same.</li>
+<li>My new implement of memory significantly reduce usage of phisical memory, and enable us to using the original replay size of DQN.</li>
 </ol>
 
       
@@ -359,7 +362,7 @@
         <p><span>Title:</span><a href="/posts/56c32fc8/">YADQN Note #2</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">SErAphLi</a></p>
         <p><span>Created:</span>2017-03-27, 22:20:24</p>
-        <p><span>Updated:</span>2017-04-19, 15:44:55</p>
+        <p><span>Updated:</span>2017-07-24, 11:17:07</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/posts/56c32fc8/" title="YADQN Note #2">http://seraphli.github.io/posts/56c32fc8/</a>
             <span class="copy-path" data-clipboard-text="From http://seraphli.github.io/posts/56c32fc8/　　By SErAphLi" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -375,15 +378,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/posts/4656ea70/">
-                    YADQN Todo List
+                <a href="/posts/687582fb/">
+                    Resource Collection About RL
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/posts/687582fb/">
-                    Resource Collection About RL
+                <a href="/posts/4656ea70/">
+                    YADQN Todo List
                 </a>
             </div>
         
@@ -473,7 +476,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/posts/4656ea70/" title="Pre: YADQN Todo List">
+            <a href="/posts/687582fb/" title="Pre: Resource Collection About RL">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -481,13 +484,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/posts/687582fb/" title="Next: Resource Collection About RL">
+            <a href="/posts/4656ea70/" title="Next: YADQN Todo List">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/21c41f5e/">YADQN Note #3</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
 
 
 

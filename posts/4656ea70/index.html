@@ -16,13 +16,14 @@
 
 
 <meta name="description" content="Here I list things and plans need to do about YADQN.">
-<meta name="keywords" content="Todo List,RL">
+<meta name="keywords" content="RL,Todo List">
 <meta property="og:type" content="article">
 <meta property="og:title" content="YADQN Todo List">
 <meta property="og:url" content="http://seraphli.github.io/posts/4656ea70/index.html">
 <meta property="og:site_name" content="Cyber Assassin Guild">
 <meta property="og:description" content="Here I list things and plans need to do about YADQN.">
-<meta property="og:updated_time" content="2017-04-19T08:53:53.991Z">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-07-24T03:17:07.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YADQN Todo List">
 <meta name="twitter:description" content="Here I list things and plans need to do about YADQN.">
@@ -303,36 +304,45 @@
           
         <h2 id="Stage-1"><a href="#Stage-1" class="headerlink" title="Stage #1"></a>Stage #1</h2><p>In this stage I will use a specific game, “Breakout”, to test the whole structure. </p>
 <ul>
-<li>[x] Figure out the observation given by openai gym.</li>
-<li>[x] Complete preprocessing part.</li>
-<li>[x] Model architecture build.</li>
-<li>[x] Network parameter replace mechanism.</li>
-<li>[x] Original experience replay.</li>
-<li>[x] Epsilon decay.</li>
-<li>[x] Link all part.</li>
-<li>[x] Add debug information output.</li>
-<li>[x] Save session parameter.</li>
-<li>[ ] Random start (no op).</li>
-<li>[ ] Test algorithm on game “Breakout”.</li>
-<li>[ ] Configuration setup for algorithm.</li>
+<li style="list-style: none"><input type="checkbox" checked> Figure out the observation given by openai gym.</li>
+<li style="list-style: none"><input type="checkbox" checked> Complete preprocessing part.</li>
+<li style="list-style: none"><input type="checkbox" checked> Model architecture build.</li>
+<li style="list-style: none"><input type="checkbox" checked> Network parameter replace mechanism.</li>
+<li style="list-style: none"><input type="checkbox" checked> Original experience replay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Epsilon decay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Link all part.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add debug information output.</li>
+<li style="list-style: none"><input type="checkbox" checked> Save session parameter.</li>
+<li style="list-style: none"><input type="checkbox"> Random start (no op).</li>
+<li style="list-style: none"><input type="checkbox" checked> Test algorithm on game “Breakout”.</li>
+<li style="list-style: none"><input type="checkbox" checked> Configuration setup for algorithm.</li>
 </ul>
 <h2 id="Stage-2"><a href="#Stage-2" class="headerlink" title="Stage #2"></a>Stage #2</h2><p>In this stage I will continue building some parts for DQN.</p>
 <ul>
-<li>[ ] Add Tensorflow tensorboard support.</li>
-<li>[x] Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)</li>
-<li>[x] Test on all games mentioned in the paper. (Same reason)</li>
-<li>[x] Generate last three column of Extended Data Table 2. (Same reason)</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Tensorflow tensorboard support.</li>
+<li style="list-style: none"><input type="checkbox"> Display weight</li>
+<li style="list-style: none"><input type="checkbox" checked> Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)</li>
+<li style="list-style: none"><input type="checkbox" checked> Test on all games mentioned in the paper. (Same reason)</li>
+<li style="list-style: none"><input type="checkbox" checked> Generate last three column of Extended Data Table 2. (Same reason)</li>
 </ul>
 <h2 id="Stage-3"><a href="#Stage-3" class="headerlink" title="Stage #3"></a>Stage #3</h2><ul>
-<li>[ ] Implement another memory mechanism</li>
-<li>[ ] Double DQN Implement</li>
-<li>[ ] Prioritized Experience Replay</li>
-<li>[ ] Dueling network</li>
-<li>[ ] DQfD</li>
+<li style="list-style: none"><input type="checkbox" checked> Implement another memory mechanism</li>
+<li style="list-style: none"><input type="checkbox"> Double DQN Implementation</li>
+<li style="list-style: none"><input type="checkbox"> Prioritized Experience Replay</li>
+<li style="list-style: none"><input type="checkbox"> Dueling network</li>
+<li style="list-style: none"><input type="checkbox"> DQfD</li>
+<li style="list-style: none"><input type="checkbox"> Store reported score in papers in the repo, and display them</li>
+<li style="list-style: none"><input type="checkbox"> Model evaluation</li>
+</ul>
+<h2 id="Double-DQN"><a href="#Double-DQN" class="headerlink" title="Double DQN"></a>Double DQN</h2><ul>
+<li style="list-style: none"><input type="checkbox"> Algorithm Implementation</li>
+<li style="list-style: none"><input type="checkbox"> Test training</li>
 </ul>
 <h2 id="DQfQ"><a href="#DQfQ" class="headerlink" title="DQfQ"></a>DQfQ</h2><ul>
-<li>[x] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don’t have frame skip. <a href="https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350" target="_blank" rel="external">Link</a></li>
-<li>[ ] Store for experience replay and demostration replay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don’t have frame skip. <a href="https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350" target="_blank" rel="external">Link</a></li>
+<li style="list-style: none"><input type="checkbox" checked> Store for experience replay and demostration replay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Display replay file in pygame.</li>
+<li style="list-style: none"><input type="checkbox"> Test algorithm.</li>
 </ul>
 
       
@@ -345,7 +355,7 @@
         <p><span>Title:</span><a href="/posts/4656ea70/">YADQN Todo List</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">SErAphLi</a></p>
         <p><span>Created:</span>2017-03-27, 22:04:21</p>
-        <p><span>Updated:</span>2017-04-19, 16:53:53</p>
+        <p><span>Updated:</span>2017-07-24, 11:17:07</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/posts/4656ea70/" title="YADQN Todo List">http://seraphli.github.io/posts/4656ea70/</a>
             <span class="copy-path" data-clipboard-text="From http://seraphli.github.io/posts/4656ea70/　　By SErAphLi" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -361,15 +371,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/posts/8c38ea69/">
-                    YADQN Note #1
+                <a href="/posts/56c32fc8/">
+                    YADQN Note #2
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/posts/56c32fc8/">
-                    YADQN Note #2
+                <a href="/posts/8c38ea69/">
+                    YADQN Note #1
                 </a>
             </div>
         
@@ -381,7 +391,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stage-1"><span class="toc-number">1.</span> <span class="toc-text">Stage #1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stage-2"><span class="toc-number">2.</span> <span class="toc-text">Stage #2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stage-3"><span class="toc-number">3.</span> <span class="toc-text">Stage #3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DQfQ"><span class="toc-number">4.</span> <span class="toc-text">DQfQ</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stage-1"><span class="toc-number">1.</span> <span class="toc-text">Stage #1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stage-2"><span class="toc-number">2.</span> <span class="toc-text">Stage #2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stage-3"><span class="toc-number">3.</span> <span class="toc-text">Stage #3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Double-DQN"><span class="toc-number">4.</span> <span class="toc-text">Double DQN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DQfQ"><span class="toc-number">5.</span> <span class="toc-text">DQfQ</span></a></li></ol>
         
     </div>
     <style>
@@ -459,7 +469,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/posts/8c38ea69/" title="Pre: YADQN Note #1">
+            <a href="/posts/56c32fc8/" title="Pre: YADQN Note #2">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -467,13 +477,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/posts/56c32fc8/" title="Next: YADQN Note #2">
+            <a href="/posts/8c38ea69/" title="Next: YADQN Note #1">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/21c41f5e/">YADQN Note #3</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
 
 
 

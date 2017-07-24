@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  
+<search> 
   
     
     <entry>
+      <title><![CDATA[YADQN Note #3]]></title>
+      <url>/posts/21c41f5e/</url>
+      <content type="html"><![CDATA[<p>In the process of implementing DQN and related algorithm, my understanding of these algorithms was greatly improved. In the beginning my algorithm can not run the code with replay size of 1000000. And now the code is able to run such configuration just using about 1GB memory.</p>
+<p>Now I’m coming up with a new idea, a memory with baseline. I’m first going to implement deuling network and double q learning, and with these improvement, I will test my memory implement.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> YADQN </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> RL </tag>
+            
+            <tag> Note </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[DiablOS Simulator Todo List]]></title>
-      <url>http://seraphli.github.io/posts/1d834600/</url>
+      <url>/posts/1d834600/</url>
       <content type="html"><![CDATA[<ul>
-<li>[ ] Change TKinter to pygame</li>
+<li style="list-style: none"><input type="checkbox"> Change TKinter to pygame</li>
 </ul>
 ]]></content>
       
@@ -28,7 +51,7 @@
     
     <entry>
       <title><![CDATA[Use Cython to Build Code]]></title>
-      <url>http://seraphli.github.io/posts/433d1379/</url>
+      <url>/posts/433d1379/</url>
       <content type="html"><![CDATA[<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><ol>
 <li>Build your code like a module, and change file name .py to .pyx</li>
 <li>Add setup.py in your folder</li>
@@ -63,7 +86,7 @@
     
     <entry>
       <title><![CDATA[RL Tutorial #1]]></title>
-      <url>http://seraphli.github.io/posts/2cffd86/</url>
+      <url>/posts/2cffd86/</url>
       <content type="html"><![CDATA[<h2 id="What’s-Reinforcement-Learning"><a href="#What’s-Reinforcement-Learning" class="headerlink" title="What’s Reinforcement Learning"></a>What’s Reinforcement Learning</h2><p>One sentence to define reinforcement learning: the goal of RL is to find out a better policy to get more rewards from environment based on our current state, experience in the past, expectation and exploration in the future.</p>
 <a id="more"></a>
 <p>Here are some important concept:</p>
@@ -96,7 +119,7 @@
     
     <entry>
       <title><![CDATA[Resource Collection About RL]]></title>
-      <url>http://seraphli.github.io/posts/687582fb/</url>
+      <url>/posts/687582fb/</url>
       <content type="html"><![CDATA[<h2 id="Book"><a href="#Book" class="headerlink" title="Book"></a>Book</h2><ol>
 <li>Reinforcement Learning: An Introduction<br> <a href="http://incompleteideas.net/sutton/book/the-book-2nd.html" target="_blank" rel="external">Online draft</a></li>
 </ol>
@@ -119,7 +142,7 @@
     
     <entry>
       <title><![CDATA[YADQN Note #2]]></title>
-      <url>http://seraphli.github.io/posts/56c32fc8/</url>
+      <url>/posts/56c32fc8/</url>
       <content type="html"><![CDATA[<h2 id="Reminder"><a href="#Reminder" class="headerlink" title="Reminder"></a>Reminder</h2><ol>
 <li>The game “Breakout” is in <a href="https://gym.openai.com/envs/Breakout-v0" target="_blank" rel="external">here</a>. The observation is an array of shape (210, 160, 3).</li>
 <li>Because preprocess part needs to record several image, which need a queue, so it can not be just one function. As I browse the documemt of tensorflow, I think I find a queue construction in tensorflow. Maybe I can try that.</li>
@@ -162,10 +185,12 @@
 <li>One transition in experience replay will take <span>$4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800$</span><!-- Has MathJax --> Bytes, which is about 220KB.</li>
 <li>Some repositories about DQN are using another memory mechanism. They store <code>(s, a, r, is_terminal)</code> in memory, and <code>s</code> just contains one image. So the memory requirement of experience replay is reduced significantly. So I intend to implement this in my code.</li>
 <li>I got this warning today <code>The TensorFlow library wasn&#39;t compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.</code>. And I search it on the net. Some say it means build tensorflow from source can speed up CPU computations. I might try to build one day.</li>
+<li>Using lzma package, you need to compile python with lzma support. <code>sudo apt install build-essential zlib1g-dev libbz2-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev</code></li>
 </ol>
 <h2 id="Changes"><a href="#Changes" class="headerlink" title="Changes"></a>Changes</h2><ol>
 <li><code>squared gradient momentum</code> and <code>min squared momentum</code> can not be found in tensorflow. So this two values are not presented in code.</li>
 <li>Because the code require too much memory, I change the experience replay size from 1000000 to 100000, replay start size from 50000 to 5000, and others remain the same.</li>
+<li>My new implement of memory significantly reduce usage of phisical memory, and enable us to using the original replay size of DQN.</li>
 </ol>
 ]]></content>
       
@@ -188,39 +213,48 @@
     
     <entry>
       <title><![CDATA[YADQN Todo List]]></title>
-      <url>http://seraphli.github.io/posts/4656ea70/</url>
+      <url>/posts/4656ea70/</url>
       <content type="html"><![CDATA[<h2 id="Stage-1"><a href="#Stage-1" class="headerlink" title="Stage #1"></a>Stage #1</h2><p>In this stage I will use a specific game, “Breakout”, to test the whole structure. </p>
 <ul>
-<li>[x] Figure out the observation given by openai gym.</li>
-<li>[x] Complete preprocessing part.</li>
-<li>[x] Model architecture build.</li>
-<li>[x] Network parameter replace mechanism.</li>
-<li>[x] Original experience replay.</li>
-<li>[x] Epsilon decay.</li>
-<li>[x] Link all part.</li>
-<li>[x] Add debug information output.</li>
-<li>[x] Save session parameter.</li>
-<li>[ ] Random start (no op).</li>
-<li>[ ] Test algorithm on game “Breakout”.</li>
-<li>[ ] Configuration setup for algorithm.</li>
+<li style="list-style: none"><input type="checkbox" checked> Figure out the observation given by openai gym.</li>
+<li style="list-style: none"><input type="checkbox" checked> Complete preprocessing part.</li>
+<li style="list-style: none"><input type="checkbox" checked> Model architecture build.</li>
+<li style="list-style: none"><input type="checkbox" checked> Network parameter replace mechanism.</li>
+<li style="list-style: none"><input type="checkbox" checked> Original experience replay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Epsilon decay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Link all part.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add debug information output.</li>
+<li style="list-style: none"><input type="checkbox" checked> Save session parameter.</li>
+<li style="list-style: none"><input type="checkbox"> Random start (no op).</li>
+<li style="list-style: none"><input type="checkbox" checked> Test algorithm on game “Breakout”.</li>
+<li style="list-style: none"><input type="checkbox" checked> Configuration setup for algorithm.</li>
 </ul>
 <h2 id="Stage-2"><a href="#Stage-2" class="headerlink" title="Stage #2"></a>Stage #2</h2><p>In this stage I will continue building some parts for DQN.</p>
 <ul>
-<li>[ ] Add Tensorflow tensorboard support.</li>
-<li>[x] Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)</li>
-<li>[x] Test on all games mentioned in the paper. (Same reason)</li>
-<li>[x] Generate last three column of Extended Data Table 2. (Same reason)</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Tensorflow tensorboard support.</li>
+<li style="list-style: none"><input type="checkbox"> Display weight</li>
+<li style="list-style: none"><input type="checkbox" checked> Test algorithm on several games. (Aborted: because the algorithm takes too much time to converge)</li>
+<li style="list-style: none"><input type="checkbox" checked> Test on all games mentioned in the paper. (Same reason)</li>
+<li style="list-style: none"><input type="checkbox" checked> Generate last three column of Extended Data Table 2. (Same reason)</li>
 </ul>
 <h2 id="Stage-3"><a href="#Stage-3" class="headerlink" title="Stage #3"></a>Stage #3</h2><ul>
-<li>[ ] Implement another memory mechanism</li>
-<li>[ ] Double DQN Implement</li>
-<li>[ ] Prioritized Experience Replay</li>
-<li>[ ] Dueling network</li>
-<li>[ ] DQfD</li>
+<li style="list-style: none"><input type="checkbox" checked> Implement another memory mechanism</li>
+<li style="list-style: none"><input type="checkbox"> Double DQN Implementation</li>
+<li style="list-style: none"><input type="checkbox"> Prioritized Experience Replay</li>
+<li style="list-style: none"><input type="checkbox"> Dueling network</li>
+<li style="list-style: none"><input type="checkbox"> DQfD</li>
+<li style="list-style: none"><input type="checkbox"> Store reported score in papers in the repo, and display them</li>
+<li style="list-style: none"><input type="checkbox"> Model evaluation</li>
+</ul>
+<h2 id="Double-DQN"><a href="#Double-DQN" class="headerlink" title="Double DQN"></a>Double DQN</h2><ul>
+<li style="list-style: none"><input type="checkbox"> Algorithm Implementation</li>
+<li style="list-style: none"><input type="checkbox"> Test training</li>
 </ul>
 <h2 id="DQfQ"><a href="#DQfQ" class="headerlink" title="DQfQ"></a>DQfQ</h2><ul>
-<li>[x] Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don’t have frame skip. <a href="https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350" target="_blank" rel="external">Link</a></li>
-<li>[ ] Store for experience replay and demostration replay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Change gym to ale, because each action in gym is repeatedly performed for a duration of kk frames. Fix: Gym provide another environment which don’t have frame skip. <a href="https://github.com/openai/gym/blob/master/gym/envs/__init__.py#L344-L350" target="_blank" rel="external">Link</a></li>
+<li style="list-style: none"><input type="checkbox" checked> Store for experience replay and demostration replay.</li>
+<li style="list-style: none"><input type="checkbox" checked> Display replay file in pygame.</li>
+<li style="list-style: none"><input type="checkbox"> Test algorithm.</li>
 </ul>
 ]]></content>
       
@@ -233,9 +267,9 @@
         
         <tags>
             
-            <tag> Todo List </tag>
-            
             <tag> RL </tag>
+            
+            <tag> Todo List </tag>
             
         </tags>
         
@@ -243,7 +277,7 @@
     
     <entry>
       <title><![CDATA[YADQN Note #1]]></title>
-      <url>http://seraphli.github.io/posts/8c38ea69/</url>
+      <url>/posts/8c38ea69/</url>
       <content type="html"><![CDATA[<h2 id="Things"><a href="#Things" class="headerlink" title="Things"></a>Things</h2><p>I will going to build the algorithm known as DQN. I decide to use <a href="https://gym.openai.com/" target="_blank" rel="external">openai gym</a> to reproduce the result described in <a href="http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html" target="_blank" rel="external">Human-level control through deep reinforcement learning</a>. The article can be download from <a href="https://www.cs.swarthmore.edu/~meeden/cs63/s15/nature15b.pdf" target="_blank" rel="external">here</a> for free.<br>I notice that there are so many repositories about DQN, but a lot of them don’t generate any benchmark for algorithms. So I think I need a benchmark and algorithm comparision, and I decide to write my own repository.<br>I think writing code is going to be painful, so I need to write down the pains I have. By the way, I’m using tensorflow and gym together.<br><a id="more"></a></p>
 <h2 id="DQN"><a href="#DQN" class="headerlink" title="DQN"></a>DQN</h2><p>The main goal of DQN is to estimate accumulate reward, known as Q-value, using deep neural network. The algorithm consists of several parts.</p>
 <ol>
@@ -304,7 +338,7 @@
     
     <entry>
       <title><![CDATA[Build Up A New Personal Blog]]></title>
-      <url>http://seraphli.github.io/posts/73bba9d9/</url>
+      <url>/posts/73bba9d9/</url>
       <content type="html"><![CDATA[<h2 id="Why-build-a-new-site"><a href="#Why-build-a-new-site" class="headerlink" title="Why build a new site"></a>Why build a new site</h2><p>When I decide to write code about reinforcement learning, I notice there is just few website about reinforcement learning. And I want to share my experiences in RL. So when I look back, I would consider this as some kind of legacies. I would be <strong>happy</strong> if some one really get helps from this site.</p>
 <a id="more"></a>
 <h2 id="Building-process"><a href="#Building-process" class="headerlink" title="Building process"></a>Building process</h2><p>It takes about two days to build this site. First I was trying to build a static site with jekyll, which is written in Ruby. But I saw most people recommended hexo, so I deleted the repo and switched to hexo.</p>
@@ -329,19 +363,19 @@
 <li>Don’t use local package of MathJax, because the website on github will have render problem.</li>
 </ol>
 <h2 id="Next-thing-I-need-to-do"><a href="#Next-thing-I-need-to-do" class="headerlink" title="Next thing I need to do"></a>Next thing I need to do</h2><ul>
-<li>[x] Write page count code.</li>
-<li>[x] Change avatar.</li>
-<li>[x] Process background images in photoshop.</li>
-<li>[x] Change background.</li>
-<li>[x] Build up my own categories page using <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="external">API</a>, <a href="http://moxfive.xyz/2015/10/25/hexo-tag-cloud/" target="_blank" rel="external">ref</a>.</li>
-<li>[x] Add bitbuket icon.</li>
-<li>[x] Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to “left stands for previous and right stands for next”. Fix: it is a issue of hexo. <a href="https://github.com/hexojs/hexo/issues/2474" target="_blank" rel="external">Issue related</a>.</li>
-<li>[x] Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about <code>.article-entry &gt; ol:last-child</code>, just delete it, otherwise it will render every article’s last list in a different way, which is quite annoying.</li>
-<li>[x] Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)</li>
-<li>[x] Add Natsume Yuujinchou wallpapers.</li>
-<li>[x] Add Game of Throne wallpapers.</li>
-<li>[x] Add Assassin’s Creed lines in About page.</li>
-<li>[ ] Process the image <code>Initiation Ceremony</code>.</li>
+<li style="list-style: none"><input type="checkbox" checked> Write page count code.</li>
+<li style="list-style: none"><input type="checkbox" checked> Change avatar.</li>
+<li style="list-style: none"><input type="checkbox" checked> Process background images in photoshop.</li>
+<li style="list-style: none"><input type="checkbox" checked> Change background.</li>
+<li style="list-style: none"><input type="checkbox" checked> Build up my own categories page using <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="external">API</a>, <a href="http://moxfive.xyz/2015/10/25/hexo-tag-cloud/" target="_blank" rel="external">ref</a>.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add bitbuket icon.</li>
+<li style="list-style: none"><input type="checkbox" checked> Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to “left stands for previous and right stands for next”. Fix: it is a issue of hexo. <a href="https://github.com/hexojs/hexo/issues/2474" target="_blank" rel="external">Issue related</a>.</li>
+<li style="list-style: none"><input type="checkbox" checked> Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about <code>.article-entry &gt; ol:last-child</code>, just delete it, otherwise it will render every article’s last list in a different way, which is quite annoying.</li>
+<li style="list-style: none"><input type="checkbox" checked> Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Natsume Yuujinchou wallpapers.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Game of Throne wallpapers.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Assassin’s Creed lines in About page.</li>
+<li style="list-style: none"><input type="checkbox"> Process the image <code>Initiation Ceremony</code>.</li>
 </ul>
 <h2 id="Just-a-reminder"><a href="#Just-a-reminder" class="headerlink" title="Just a reminder"></a>Just a reminder</h2><ol>
 <li>git clone blog repository</li>
@@ -352,7 +386,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[branch &quot;master&quot;]</div><div class="line">  remote = https://github.com/Seraphli/seraphli.github.io.git</div><div class="line">  merge = refs/heads/master</div><div class="line">[credential]</div><div class="line">  helper = store</div><div class="line">[receive]</div><div class="line">  denyNonFastforwards = false # change to false to enable overwriting</div></pre></td></tr></table></figure>
 </li>
 <li><p>Because I try to use the local package of MathJax, hexo need to monitor more files, which will cause a error <code>FATAL watch ENOSPC</code>.<br>Solution:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee <span class="_">-a</span> /etc/sysctl.conf &amp;&amp; sudo sysctl -p</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</div></pre></td></tr></table></figure>
 <p>Which will set the limitation of file watches to a higher one.<br>PS: This problem may be caused by BrowserSync plugin. And use MathJax in local package will cause hexo react slower.</p>
 </li>
 <li>A latex symbol list, <a href="http://latex.wikia.com/wiki/List_of_LaTeX_symbols" target="_blank" rel="external">here</a>. <a href="http://reu.dimacs.rutgers.edu/Symbols.pdf" target="_blank" rel="external">PDF version</a>, need to overcome GFW.</li>

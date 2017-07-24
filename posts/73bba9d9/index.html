@@ -22,6 +22,7 @@
 <meta property="og:url" content="http://seraphli.github.io/posts/73bba9d9/index.html">
 <meta property="og:site_name" content="Cyber Assassin Guild">
 <meta property="og:description" content="Why build a new siteWhen I decide to write code about reinforcement learning, I notice there is just few website about reinforcement learning. And I want to share my experiences in RL. So when I look">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-04-06T08:59:32.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build Up A New Personal Blog">
@@ -325,19 +326,19 @@
 <li>Don’t use local package of MathJax, because the website on github will have render problem.</li>
 </ol>
 <h2 id="Next-thing-I-need-to-do"><a href="#Next-thing-I-need-to-do" class="headerlink" title="Next thing I need to do"></a>Next thing I need to do</h2><ul>
-<li>[x] Write page count code.</li>
-<li>[x] Change avatar.</li>
-<li>[x] Process background images in photoshop.</li>
-<li>[x] Change background.</li>
-<li>[x] Build up my own categories page using <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="external">API</a>, <a href="http://moxfive.xyz/2015/10/25/hexo-tag-cloud/" target="_blank" rel="external">ref</a>.</li>
-<li>[x] Add bitbuket icon.</li>
-<li>[x] Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to “left stands for previous and right stands for next”. Fix: it is a issue of hexo. <a href="https://github.com/hexojs/hexo/issues/2474" target="_blank" rel="external">Issue related</a>.</li>
-<li>[x] Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about <code>.article-entry &gt; ol:last-child</code>, just delete it, otherwise it will render every article’s last list in a different way, which is quite annoying.</li>
-<li>[x] Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)</li>
-<li>[x] Add Natsume Yuujinchou wallpapers.</li>
-<li>[x] Add Game of Throne wallpapers.</li>
-<li>[x] Add Assassin’s Creed lines in About page.</li>
-<li>[ ] Process the image <code>Initiation Ceremony</code>.</li>
+<li style="list-style: none"><input type="checkbox" checked> Write page count code.</li>
+<li style="list-style: none"><input type="checkbox" checked> Change avatar.</li>
+<li style="list-style: none"><input type="checkbox" checked> Process background images in photoshop.</li>
+<li style="list-style: none"><input type="checkbox" checked> Change background.</li>
+<li style="list-style: none"><input type="checkbox" checked> Build up my own categories page using <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="external">API</a>, <a href="http://moxfive.xyz/2015/10/25/hexo-tag-cloud/" target="_blank" rel="external">ref</a>.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add bitbuket icon.</li>
+<li style="list-style: none"><input type="checkbox" checked> Fix the issue that the newer post on the left and the older post on the right, reverse this setting. Because people are more used to “left stands for previous and right stands for next”. Fix: it is a issue of hexo. <a href="https://github.com/hexojs/hexo/issues/2474" target="_blank" rel="external">Issue related</a>.</li>
+<li style="list-style: none"><input type="checkbox" checked> Fix the issue when sometime background of list items are not right. Fix: In the article.styl file, there is a style setting about <code>.article-entry &gt; ol:last-child</code>, just delete it, otherwise it will render every article’s last list in a different way, which is quite annoying.</li>
+<li style="list-style: none"><input type="checkbox" checked> Related link below the post.(Cancel: it is a new functionality. Maybe in the future I will develop it.)</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Natsume Yuujinchou wallpapers.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Game of Throne wallpapers.</li>
+<li style="list-style: none"><input type="checkbox" checked> Add Assassin’s Creed lines in About page.</li>
+<li style="list-style: none"><input type="checkbox"> Process the image <code>Initiation Ceremony</code>.</li>
 </ul>
 <h2 id="Just-a-reminder"><a href="#Just-a-reminder" class="headerlink" title="Just a reminder"></a>Just a reminder</h2><ol>
 <li>git clone blog repository</li>
@@ -348,7 +349,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[branch &quot;master&quot;]</div><div class="line">  remote = https://github.com/Seraphli/seraphli.github.io.git</div><div class="line">  merge = refs/heads/master</div><div class="line">[credential]</div><div class="line">  helper = store</div><div class="line">[receive]</div><div class="line">  denyNonFastforwards = false # change to false to enable overwriting</div></pre></td></tr></table></figure>
 </li>
 <li><p>Because I try to use the local package of MathJax, hexo need to monitor more files, which will cause a error <code>FATAL watch ENOSPC</code>.<br>Solution:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee <span class="_">-a</span> /etc/sysctl.conf &amp;&amp; sudo sysctl -p</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</div></pre></td></tr></table></figure>
 <p>Which will set the limitation of file watches to a higher one.<br>PS: This problem may be caused by BrowserSync plugin. And use MathJax in local package will cause hexo react slower.</p>
 </li>
 <li>A latex symbol list, <a href="http://latex.wikia.com/wiki/List_of_LaTeX_symbols" target="_blank" rel="external">here</a>. <a href="http://reu.dimacs.rutgers.edu/Symbols.pdf" target="_blank" rel="external">PDF version</a>, need to overcome GFW.</li>
@@ -380,12 +381,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
+            <div id="article-nav-newer" class="article-nav-title">
                 <a href="/posts/8c38ea69/">
                     YADQN Note #1
                 </a>
             </div>
+        
         
     </nav>
 
@@ -473,19 +474,19 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/posts/8c38ea69/" title="Pre: YADQN Note #1">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/posts/8c38ea69/" title="Next: YADQN Note #1">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/21c41f5e/">YADQN Note #3</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/1d834600/">DiablOS Simulator Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/433d1379/">Use Cython to Build Code</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/2cffd86/">RL Tutorial #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/687582fb/">Resource Collection About RL</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/56c32fc8/">YADQN Note #2</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/4656ea70/">YADQN Todo List</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/8c38ea69/">YADQN Note #1</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/73bba9d9/">Build Up A New Personal Blog</a></li></ul>
 
 
 
