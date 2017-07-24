@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://seraphli.github.io/posts/56c32fc8/index.html">
 <meta property="og:site_name" content="Cyber Assassin Guild">
 <meta property="og:description" content="Notes while building YADQN">
-<meta property="og:updated_time" content="2017-04-19T01:50:43.693Z">
+<meta property="og:updated_time" content="2017-04-19T07:44:55.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YADQN Note #2">
 <meta name="twitter:description" content="Notes while building YADQN">
@@ -342,6 +342,7 @@
 <li>Strange thing is that I have to wait for about 100000 runs of game, and there is no improvement of the performance.</li>
 <li>One transition in experience replay will take <span>$4 \times (84 \times 84 \times 4 \times 2 + 1 + 1) = 225800$</span><!-- Has MathJax --> Bytes, which is about 220KB.</li>
 <li>Some repositories about DQN are using another memory mechanism. They store <code>(s, a, r, is_terminal)</code> in memory, and <code>s</code> just contains one image. So the memory requirement of experience replay is reduced significantly. So I intend to implement this in my code.</li>
+<li>I got this warning today <code>The TensorFlow library wasn&#39;t compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.</code>. And I search it on the net. Some say it means build tensorflow from source can speed up CPU computations. I might try to build one day.</li>
 </ol>
 <h2 id="Changes"><a href="#Changes" class="headerlink" title="Changes"></a>Changes</h2><ol>
 <li><code>squared gradient momentum</code> and <code>min squared momentum</code> can not be found in tensorflow. So this two values are not presented in code.</li>
@@ -358,7 +359,7 @@
         <p><span>Title:</span><a href="/posts/56c32fc8/">YADQN Note #2</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">SErAphLi</a></p>
         <p><span>Created:</span>2017-03-27, 22:20:24</p>
-        <p><span>Updated:</span>2017-04-19, 09:50:43</p>
+        <p><span>Updated:</span>2017-04-19, 15:44:55</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/posts/56c32fc8/" title="YADQN Note #2">http://seraphli.github.io/posts/56c32fc8/</a>
             <span class="copy-path" data-clipboard-text="From http://seraphli.github.io/posts/56c32fc8/　　By SErAphLi" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
